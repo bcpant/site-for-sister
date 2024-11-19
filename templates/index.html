@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}" sizes="32x32">
+    <title>Китайский язык</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mainstyles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Репетитор по китайскому языку онлайн</h1>
+        <nav>
+            <ul class="nav">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">Как проходят занятия</a></li>
+                <li><a href="#services">Стоимость занятий</a></li>
+                <li><a href="#services">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="content-block">
+        <div class="content-image">
+            <img src="{{ url_for("static", filename="images/pic1.jpg") }}" alt="Описание изображения">
+        </div>
+        <div class="content-text">
+            <h1>Привет!</h1>
+            <p class="about-div">Меня зовут Евгения, и уже пять лет я живу в Китае.</p>
+            <p class="about-div">За это время я не только полюбила местную культуру и язык, но и накопила уникальный опыт, которым с радостью готова поделиться с вами.</p>
+            <p class="about-div">Приглашаю вас на интересные занятия по <strong>изучению китайского языка!</strong></p>    
+        </div>
+    </div>
+    </div>
+
+    <div id="about" class="content-block">
+        <div class="content-text">
+            <p class="p-about">Если вам нужно онлайн изучение китайского языка, то вы попали по адресу!</p>
+            <p class="p-about">Занятия проходят онлайн с помощью <strong>Skype</strong>.</p>
+            <p class="p-about">Согласуем <strong>индивидуальный план занятий.</strong></p>
+            <p class="p-about">Быстро ощутите результат и прогресс в познании языка.</p>
+        </div>
+    </div>
+
+    <div id="services" class="content-block">
+        <div class="container">
+            <h1>Стоимость занятий</h1>
+            <div class="pricing-block">
+                <p class="price">1700<span class="currency">₽</span></p>
+                <p class="duration">60 минут</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Контакты</h1>
+            <div class="contacts-block">
+                <div class="contact-item">
+                    <img src="{{ url_for("static", filename="images/tg.png") }}" alt="Telegram" class="contact-icon"> <!-- Замените на путь к иконке Telegram -->
+                    <a href="https://t.me/tiriya1709" class="contact-text-tg">Telegram</a>
+                </div>
+                <div class="contact-item">
+                    <img src="{{ url_for("static", filename="images/wcht.png") }}" alt="WeChat" class="contact-icon"> <!-- Замените на путь к иконке WeChat -->
+                    <span class="contact-text-wc">tiriya1709</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <table class="gallery_menu">
+            <tr>
+                <th><button class="gallery-button" onclick="prevImage()"> < </button></th>
+                <th><img id="galleryImage" src="{{ url_for('static', filename='images/1.jpg') }}" alt="Фотография" /></th>
+                <th><button class="gallery-button" onclick="nextImage()"> > </button></th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="menu_div">
+        <div class="footer">
+            <p>Футер страницы</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    // JavaScript для фотогалереи
+    const images = [
+    '{{ url_for("static", filename="images/1.jpg") }}',
+    '{{ url_for("static", filename="images/2.jpg") }}',
+    '{{ url_for("static", filename="images/4.jpg") }}',
+    '{{ url_for("static", filename="images/5.jpg") }}',
+    '{{ url_for("static", filename="images/cont.jpg") }}',
+    '{{ url_for("static", filename="images/rev.jpg") }}',
+];
+let currentIndex = 0;
+
+function showImage(index) {
+    const galleryImage = document.getElementById("galleryImage");
+    galleryImage.classList.remove("show"); // Убираем класс show перед сменой
+    setTimeout(() => {
+        galleryImage.src = images[index];
+        galleryImage.classList.add("show"); // Добавляем класс show после смены изображения
+    }, 500); // Время задержки должно совпадать с временем перехода в CSS
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length; // Переход к следующему изображению
+    showImage(currentIndex);
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Переход к предыдущему изображению
+    showImage(currentIndex);
+}
+</script>
+</html>

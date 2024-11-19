@@ -1,0 +1,225 @@
+/* Основные стили для body */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем поля */
+    line-height: 1.6; /* Интерлиньяж */
+    background-color: #f4f4f4; /* Цвет фона страницы */
+    background-image: url("static/images/BACKPIC.jpg"); /* Фоновое изображение */
+}
+
+/* Стили для шапки */
+.header {
+    background-color: #34495e; /* Цвет фона шапки */
+    color: #ecf0f1; /* Цвет текста шапки */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    text-align: center; /* Центрирование текста */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень под шапкой */
+}
+/* Стили для меню навигации */
+.nav {
+    display: flex; /* Делаем меню горизонтальным */
+    justify-content: center; /* Центрирование содержимого меню */
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 10px 0 0; /* Убираем внешние отступы */
+}
+
+.nav li {
+    margin: 0 20px; /* Отступы между пунктами меню */
+}
+
+.nav a {
+    color: #ecf0f1; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер шрифта */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.nav a:hover {
+    color: #1abc9c; /* Цвет текста при наведении */
+}
+
+/* Стили для галереи */
+.gallery {
+    margin: 20px auto; /* Центрирование галереи */
+    max-width: 800px; /* Максимальная ширина галереи */
+    border: 2px solid #1abc9c; /* Рамка вокруг галереи */
+    border-radius: 10px; /* Закругление углов */
+    overflow: hidden; /* Скрывает переполненные элементы */
+    background-color: white; /* Цвет фона галереи */
+    background-size: cover; /* Задает размер фона по размеру блока */
+    background-position: center; /* Центрирование фонового изображения */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Тень галереи */
+}
+
+/* Стили для изображения в галерее */
+.gallery img {
+    max-width: 100%; /* Изображения будут адаптивными */
+    height: auto; /* Высота будет автоматически подстраиваться */
+}
+
+/* Стили для кнопок навигации галереи */
+.gallery-button {
+    background-color: #2c3e50; /* Цвет кнопок */
+    color: #ecf0f1; /* Цвет текста кнопок */
+    border: none; 
+    padding: 15px; /* Отступы */
+    border-radius: 5px; /* Закругление углов */
+    cursor: pointer; 
+    font-size: 18px; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.gallery-button:hover {
+    background-color: #1abc9c; /* Эффект при наведении */
+}
+
+/* Стили для футера */
+.footer {
+    text-align: center; /* Центрирование текста футера */
+    padding: 10px 0; /* Отступы */
+    background-color: #34495e; /* Цвет фона футера */
+    color: #ecf0f1; /* Цвет текста футера */
+    position: relative; /* Относительное позиционирование для стилей */
+    bottom: 0; /* Привязка к нижней части страницы */
+    width: 100%; /* Полная ширина */
+}
+
+.menu_div {
+    margin: 20px; /* Отступы вокруг меню */
+}
+
+.content-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.content-text {
+    padding: 20px;
+    text-align: left;
+}
+
+.content-text h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.content-text p {
+    line-height: 1.6;
+    color: #666;
+}
+
+.content-image {
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 0 0 8px; /* Скругленные углы для картинки с левой стороны */
+}
+
+.p-about {
+    font-size: 1.1em;
+    background-color: #eaf6fd;
+    border-left: 5px solid #2980b9;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+.p-about:hover {
+    transform: scale(1.02);
+    background-color: #d1e9f7;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+
+.pricing-block {
+    background-color: #eaf6fd;
+    border: 2px solid #2980b9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s, background-color 0.3s;
+}
+.pricing-block:hover {
+    transform: scale(1.02);
+    background-color: #d1e9f7;
+}
+.price {
+    font-size: 2em;
+    color: #2980b9;
+    margin: 10px 0;
+}
+.duration {
+    font-size: 1.2em;
+    color: #555;
+}
+.currency {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+.contacts-block {
+    background-color: #eaf6fd;
+    border: 2px solid #2980b9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.contact-icon {
+    width: 40px; /* Размер иконок */
+    height: 40px;
+    margin-right: 15px;
+}
+.contact-text-wc {
+    font-size: 1.2em;
+    color: #29b929;
+}
+
+.contact-text-tc {
+    font-size: 1.2em;
+    color: #414bd3;
+}
+
+.about-div {
+    font-size: 1.2em; /* Увеличенный размер шрифта для абзацев */
+    line-height: 1.6; /* Увеличиваем междустрочный интервал для лучшей читаемости */
+    margin-bottom: 15px;
+}
+strong {
+    color: #2980b9; /* Цвет для выделенного текста */
+}
