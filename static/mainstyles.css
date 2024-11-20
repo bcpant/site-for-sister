@@ -223,3 +223,86 @@ body {
 strong {
     color: #2980b9; /* Цвет для выделенного текста */
 }
+@media (max-width: 768px) {
+    .nav li {
+        display: block; /* вертикальное меню на малых экранах */
+        margin: 10px 0;
+    }
+
+    .content-block {
+        padding: 10px;
+        display: flex;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery_menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .gallery-button {
+        padding: 15px;
+    }
+
+    .price {
+        font-size: 24px;
+        display: flex;
+    }
+
+    .contacts-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav li {
+        display: block; /* вертикальное меню на малых экранах */
+        margin: 10px 0;
+    }
+
+    .content-block {
+        padding: 10px;
+        display: flex;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery_menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .gallery-button {
+        padding: 15px;
+    }
+
+    .price {
+        font-size: 24px;
+        display: flex;
+    }
+
+    .contacts-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        margin: 10px 0;
+    }
+}
